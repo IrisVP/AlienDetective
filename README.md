@@ -5,9 +5,9 @@ Species of maritime fauna all over the world are known to travel great distances
 
 In the 'Input' folder, there are examples of input files necessary for this workflow. 
 The files are in .csv format:
-- Coordinates.csv: Contains the names of the samplelocations in the column 'Observatory.ID', along with their latitudes and longitudes. < /br>
-- Metadata.csv: Contains metadata per sample, including sample region, country, latitudes, longitudes, sample dates, etc. Note: Metadata should be prepared for personal use in this workflow. The 'Coordinates.csv' file is an example of this preparation. < /br>
-- Species_Location.csv: Contains a 'Specieslist' column with all the species names. The other columns are sample location names, with the data in these columns representing the number of samples taken from a species for a specific location.< /br>
+- Coordinates.csv: Contains the names of the samplelocations in the column 'Observatory.ID', along with their latitudes and longitudes. <br />
+- Metadata.csv: Contains metadata per sample, including sample region, country, latitudes, longitudes, sample dates, etc. Note: Metadata should be prepared for personal use in this workflow. The 'Coordinates.csv' file is an example of this preparation. <br />
+- Species_Location.csv: Contains a 'Specieslist' column with all the species names. The other columns are sample location names, with the data in these columns representing the number of samples taken from a species for a specific location.<br />
 
 Note: The Coordinates.csv and Species_Location.csv files should be prepared exactly like the examples for use in 1_Calculation_sea_distances.R.
 
