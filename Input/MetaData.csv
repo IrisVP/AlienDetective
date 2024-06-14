@@ -1,0 +1,163 @@
+Sample_region_country,Country,Observatory-ID,ARMS-ID,Latitude,Longitude,Depth_m,Monitoring_area,Deployment_date,Retrieval_date,Days_Deployed,Fraction,Filename
+North Sea (Belgium),Belgium,BelgianCoast,AZFPin ,51.66522,2.82558,37,LHI,2018-07-12,2018-08-18,37,MF500,BelgianCoast.AZFPin.2018.MF500
+North Sea (Belgium),Belgium,BelgianCoast,AZFPin ,51.66522,2.82558,37,LHI,2018-07-12,2018-08-18,37,MF200,BelgianCoast.AZFPin.180712.180818.MF200.EtOH
+North Sea (Belgium),Belgium,BelgianCoast,ZBE1,51.364298,3.20701,7,Marina,2019-09-24,2020-03-03,161,MT100,BelgianCoast.ZBE1.190924.200303.MT100
+North Sea (Belgium),Belgium,BelgianCoast,ZBE1,51.364298,3.20701,7,Marina,2019-09-24,2020-03-03,161,SF40,BelgianCoast.ZBE1.190924.200303.SF40
+North Sea (Belgium),Belgium,BelgianCoast,JJC81,51.6533567,2.79178508,38,LHI,2020-05-13,2020-10-12,152,MF100,BelgianCoast.JJ.C8.1.200506.201012.MF100
+North Sea (Belgium),Belgium,BelgianCoast,JJC81,51.6533567,2.79178508,38,LHI,2020-05-13,2020-10-12,152,MF500,BelgianCoast.JJ.C8.1.200506.201012.MF500
+North Sea (Belgium),Belgium,BelgianCoast,JJC86,51.65264,2.79369998,37,LHI,2020-05-13,2020-10-12,152,MF100,BelgianCoast.JJ.C8.6.200506.201012.MF100
+North Sea (Belgium),Belgium,BelgianCoast,JJC86,51.65264,2.79369998,37,LHI,2020-05-13,2020-10-12,152,MF500,BelgianCoast.JJ.C8.6.200506.201012.MF500
+North Sea (Belgium),Belgium,BelgianCoast,JJCD78,51.65374944,2.79602577,38,LHI,2020-05-13,2020-10-12,152,MF100,BelgianCoast.JJ.CD78.200506.201012.MF100
+Bay of Biscay (Spain),Spain,Getxo,G1 ,43.338452,-3.014833,5,Marina,2019-06-24,2019-10-16,114,MF100,Getxo.1.2019.MF100
+Bay of Biscay (Spain),Spain,Getxo,G1 ,43.338452,-3.014833,5,Marina,2019-06-24,2019-10-16,114,MF500,Getxo.1.2019.MF500
+Bay of Biscay (Spain),Spain,Getxo,G1 ,43.338452,-3.014833,5,Marina,2019-06-24,2019-10-16,114,SF40,Getxo.1.2019.SF40
+Bay of Biscay (Spain),Spain,Getxo,G2 ,43.3385,-3.01491,5,Marina,2019-06-24,2019-10-16,114,MF500,Getxo.2.2019.MF500
+Bay of Biscay (Spain),Spain,Getxo,G2 ,43.3385,-3.01491,5,Marina,2019-06-24,2019-10-16,114,SF40,Getxo.2A.2019.SF40
+Bay of Biscay (Spain),Spain,Getxo,G2 ,43.3385,-3.01491,5,Marina,2019-06-24,2019-10-16,114,SF40,Getxo.2B.2019.SF40
+Bay of Biscay (Spain),Spain,Getxo,G3 ,43.33843,-3.01483,5,Marina,2019-06-24,2019-10-16,114,MF100,Getxo.3.2019.MF100
+Bay of Biscay (Spain),Spain,Getxo,G3 ,43.33843,-3.01483,5,Marina,2019-06-24,2019-10-16,114,MF500,Getxo.3.2019.MF500
+Bay of Biscay (Spain),Spain,Getxo,G3 ,43.33843,-3.01483,5,Marina,2019-06-24,2019-10-16,114,SF40,Getxo.3A.2019.SF40
+Bay of Biscay (Spain),Spain,Getxo,G3 ,43.33843,-3.01483,5,Marina,2019-06-24,2019-10-16,114,SF40,Getxo.3B.2019.SF40
+Bay of Biscay (Spain),Spain,Getxo,G3 ,43.33843,-3.01483,5,Marina,2019-06-24,2019-10-16,114,SF40,Getxo.3C.2019.SF40
+North Sea Skagerrak (Sweden),Sweden,Koster,VH2 ,58.87633,11.111884,22,MPA,2018-04-18,2018-09-06,141,SF40,Koster.VH2.SF40.2018
+North Sea Skagerrak (Sweden),Sweden,Koster,VH2 ,58.87633,11.111884,22,MPA,2018-04-18,2018-09-06,141,MF100,Koster.VH2.MF100.2018.EtOH
+North Sea Skagerrak (Sweden),Sweden,Koster,VH2 ,58.87633,11.111884,22,MPA,2018-04-18,2018-09-06,141,MF500,Koster.VH2.MF500.2018.EtOH
+North Sea Skagerrak (Sweden),Sweden,Koster,VH1 ,58.875155,11.103194,24,MPA,2019-05-27,2020-07-16,416,MF100,Koster.VH1.MF100.2019
+North Sea Skagerrak (Sweden),Sweden,Koster,VH1 ,58.875155,11.103194,24,MPA,2019-05-27,2020-07-16,416,MF500,Koster.VH1.MF500.2019
+North Sea Skagerrak (Sweden),Sweden,Koster,VH1 ,58.875155,11.103194,24,MPA,2019-05-27,2020-07-16,416,SF40,Koster.VH1.SF40.2019
+North Sea Skagerrak (Sweden),Sweden,Koster,VH3 ,58.859877,11.080491,25,MPA,2019-05-27,2020-07-16,416,MF100,Koster.VH3.MF100.2019
+North Sea Skagerrak (Sweden),Sweden,Koster,VH3 ,58.859877,11.080491,25,MPA,2019-05-27,2020-07-16,416,MF500,Koster.VH3.MF500.2019
+North Sea Skagerrak (Sweden),Sweden,Koster,VH1 ,58.875155,11.103194,24,MPA,2020-07-16,2021-06-08,327,MF100,Koster.VH1.MF100.2020
+North Sea Skagerrak (Sweden),Sweden,Koster,VH1 ,58.875155,11.103194,24,MPA,2020-07-16,2021-06-08,327,MF500,Koster.VH1.MF500.2020
+North Sea Skagerrak (Sweden),Sweden,Koster,VH1 ,58.875155,11.103194,24,MPA,2020-07-16,2021-06-08,327,SF40,Koster.VH1.SF40.2020
+North Sea Skagerrak (Sweden),Sweden,Koster,VH2 ,58.87633,11.111884,22,MPA,2020-07-16,2021-06-08,327,MF100,Koster.VH2.MF100.2020
+North Sea Skagerrak (Sweden),Sweden,Koster,VH2 ,58.87633,11.111884,22,MPA,2020-07-16,2021-06-08,327,MF500,Koster.VH2.MF500.2020
+North Sea Skagerrak (Sweden),Sweden,Koster,VH2 ,58.87633,11.111884,22,MPA,2020-07-16,2021-06-08,327,SF40,Koster.VH2.SF40.2020
+North Sea Skagerrak (Sweden),Sweden,Koster,VH3 ,58.859877,11.080491,25,MPA,2020-07-16,2021-06-08,327,MF100,Koster.VH3.MF100.2020
+North Sea Skagerrak (Sweden),Sweden,Koster,VH3 ,58.859877,11.080491,25,MPA,2020-07-16,2021-06-08,327,MF500,Koster.VH3.MF500.2020
+North Sea Skagerrak (Sweden),Sweden,Koster,VH3 ,58.859877,11.080491,25,MPA,2020-07-16,2021-06-08,327,SF40,Koster.VH3.SF40.2020
+North Sea Kattegat (Denmark),Denmark,Laeso,Bluereef1 ,57.25689,11.14193,10,LHI,2019-08-19,2020-08-11,358,MF100,Laesoe1.190819.200811.MF100.A
+North Sea Kattegat (Denmark),Denmark,Laeso,Bluereef1 ,57.25689,11.14193,10,LHI,2019-08-19,2020-08-11,358,MF500,Laesoe1.190819.200811.MF500.A
+North Sea Kattegat (Denmark),Denmark,Laeso,Bluereef1 ,57.25689,11.14193,10,LHI,2019-08-19,2020-08-11,358,SF40,Laesoe1.190819.200811.SF40.A
+North Sea Kattegat (Denmark),Denmark,Laeso,Bluereef2 ,57.25692,11.14197,10,LHI,2019-08-19,2020-08-11,358,MF100,Laesoe2.190819.200811.MF100.A
+North Sea Kattegat (Denmark),Denmark,Laeso,Bluereef2 ,57.25692,11.14197,10,LHI,2019-08-19,2020-08-11,358,MF500,Laesoe2.190819.200811.MF500.A
+North Sea Kattegat (Denmark),Denmark,Laeso,Bluereef2 ,57.25692,11.14197,10,LHI,2019-08-19,2020-08-11,358,SF40,Laesoe2.190819.200811.SF40.A
+North Sea Kattegat (Denmark),Denmark,Laeso,Bluereef3 ,57.25692,11.14199,10,LHI,2019-08-19,2020-08-11,358,MF100,Laesoe3.190819.200811.MF100.A
+North Sea Kattegat (Denmark),Denmark,Laeso,Bluereef3 ,57.25692,11.14199,10,LHI,2019-08-19,2020-08-11,358,MF500,Laesoe3.190819.200811.MF500.A
+North Sea Kattegat (Denmark),Denmark,Laeso,Bluereef3 ,57.25692,11.14199,10,LHI,2019-08-19,2020-08-11,358,SF40,Laesoe3.190819.200811.SF40.A
+North Sea (Denmark),Denmark,Limfjord,Yellow8,56.902366,9.055797,4,LHI,2019-06-18,2019-10-29,133,MF100,Limfjord.Yellow8.2019.MF100
+North Sea (Denmark),Denmark,Limfjord,Yellow8,56.902366,9.055797,4,LHI,2019-06-18,2019-10-29,133,MF500,Limfjord.Yellow8.2019.MF500
+North Sea (Denmark),Denmark,Limfjord,Yellow8,56.902366,9.055797,4,LHI,2019-06-18,2019-10-29,133,SF40,Limfjord.Yellow8.2019.SF40
+North Sea (Denmark),Denmark,Limfjord,Green33 ,56.901246,9.058189,4,LHI,2019-06-18,2019-10-29,133,MF100,Limfjord.Green33.2019.MF100
+North Sea (Denmark),Denmark,Limfjord,Green33 ,56.901246,9.058189,4,LHI,2019-06-18,2019-10-29,133,MF500,Limfjord.Green33.2019.MF500
+North Sea (Denmark),Denmark,Limfjord,Green33 ,56.901246,9.058189,4,LHI,2019-06-18,2019-10-29,133,SF40,Limfjord.Green33.2019.SF40
+North Sea (Denmark),Denmark,Limfjord,Red2,56.89985,9.05663333,4,LHI,2019-06-18,2019-10-29,133,MF100,Limfjord.Red2.2019.MF100
+North Sea (Denmark),Denmark,Limfjord,Red2,56.89985,9.05663333,4,LHI,2019-06-18,2019-10-29,133,MF500,Limfjord.Red2.2019.MF500
+North Sea (Denmark),Denmark,Limfjord,Red2,56.89985,9.05663333,4,LHI,2019-06-18,2019-10-29,133,SF40,Limfjord.Red2.2019.SF40
+British channel (UK),UK,Plymouth,MBA1 ,50.3674,-4.1552,1,Marina,2018-07-01,2018-10-01,92,MF100,Plymouth.MBA1.180701.181001.MF100.DMSO
+British channel (UK),UK,Plymouth,MBA1 ,50.3674,-4.1552,1,Marina,2018-07-01,2018-10-01,92,MF500,Plymouth.MBA1.180701.181001.MF500.DMSO
+British channel (UK),UK,Plymouth,MBA1 ,50.3674,-4.1552,1,Marina,2018-07-01,2018-10-01,92,SF40,Plymouth.MBA1.180701.181001.SF40.DMSO
+British channel (UK),UK,Plymouth,MBA1 ,50.3674,-4.1552,1,Marina,2018-07-01,2018-10-01,92,MF100,Plymouth.MBA1.180701.181001.MF100.EtOH
+British channel (UK),UK,Plymouth,MBA1 ,50.3674,-4.1552,1,Marina,2018-07-01,2018-10-01,92,MF500,Plymouth.MBA1.180701.181001.MF500.EtOH
+British channel (UK),UK,Plymouth,MBA1 ,50.3674,-4.1552,1,Marina,2018-07-01,2018-10-01,92,SF40,Plymouth.MBA1.180701.181001.SF40.EtOH
+British channel (UK),UK,Plymouth,MBA2 ,50.350134,-4.159167,10,Marina,2018-07-01,2018-10-01,92,SF40,Plymouth.MBA2.180701.181001.SF40.DMSO
+British channel (UK),UK,Plymouth,MBA2 ,50.350134,-4.159167,10,Marina,2018-07-01,2018-10-01,92,SF40,Plymouth.MBA2.180701.181001.SF40.EtOH
+British channel (UK),UK,Plymouth,MBA1A ,50.3673,-4.1554,2,Marina,2019-07-16,2019-09-16,62,MF100,Plymouth.A.2019.MF100
+British channel (UK),UK,Plymouth,MBA1A ,50.3673,-4.1554,2,Marina,2019-07-16,2019-09-16,62,MF500,Plymouth.A.2019.MF500
+British channel (UK),UK,Plymouth,MBA1A ,50.3673,-4.1554,2,Marina,2019-07-16,2019-09-16,62,SF40,Plymouth.A.2019.SF40
+British channel (UK),UK,Plymouth,MBA1B ,50.3668,-4.1561,2,Marina,2019-07-16,2019-08-18,33,MF100,Plymouth.B.2019.MF100
+British channel (UK),UK,Plymouth,MBA1B ,50.3668,-4.1561,2,Marina,2019-07-16,2019-08-18,33,MF500,Plymouth.B.2019.MF500
+British channel (UK),UK,Plymouth,MBA1B ,50.3668,-4.1561,2,Marina,2019-07-16,2019-08-18,33,SF40,Plymouth.B.2019.SF40
+British channel (UK),UK,Plymouth,MBA1C,50.3674,-4.1544,2,Marina,2019-07-16,2019-09-20,66,MF100,Plymouth.C.2019.MF100
+British channel (UK),UK,Plymouth,MBA1C,50.3674,-4.1544,2,Marina,2019-07-16,2019-09-20,66,MF500,Plymouth.C.2019.MF500
+British channel (UK),UK,Plymouth,MBA1C,50.3674,-4.1544,2,Marina,2019-07-16,2019-09-20,66,SF40,Plymouth.C.2019.SF40
+British channel (France),France,Roscoff,MarBloR1 ,48.71751,-3.96649,1,Marina,2018-07-09,2018-10-24,107,MF100,Roscoff.MarBloR1.180709.181024.MF100.DMSO
+British channel (France),France,Roscoff,MarBloR1 ,48.71751,-3.96649,1,Marina,2018-07-09,2018-10-24,107,MF500,Roscoff.MarBloR1.180709.181024.MF500.DMSO
+British channel (France),France,Roscoff,MarBloR1 ,48.71751,-3.96649,1,Marina,2018-07-09,2018-10-24,107,SF40,Roscoff.MarBloR1.180709.181024.SF40.DMSO
+British channel (France),France,Roscoff,MarBloR1 ,48.71751,-3.96649,1,Marina,2018-07-09,2018-10-24,107,MF100,Roscoff.MarBloR1.180709.181024.MF100.EtOH
+British channel (France),France,Roscoff,MarBloR1 ,48.71751,-3.96649,1,Marina,2018-07-09,2018-10-24,107,MF500,Roscoff.MarBloR1.180709.181024.MF500.EtOH
+British channel (France),France,Roscoff,MarBloR1 ,48.71751,-3.96649,1,Marina,2018-07-09,2018-10-24,107,SF40,Roscoff.MarBloR1.180709.181024.SF40.EtOH
+British channel (France),France,Roscoff,MarBloR1 ,48.71751,-3.96649,1,Marina,2019-06-12,2019-09-16,96,MF100,Roscoff.MBloR1.2019.MF100
+British channel (France),France,Roscoff,MarBloR1 ,48.71751,-3.96649,1,Marina,2019-06-12,2019-09-16,96,MF500,Roscoff.MBloR1.2019.MF500
+British channel (France),France,Roscoff,MarBloR1 ,48.71751,-3.96649,1,Marina,2019-06-12,2019-09-16,96,SF40,Roscoff.MBloR1.2019.SF40
+British channel (France),France,Roscoff,MarBloR2,48.71751,-3.96649,1,Marina,2019-06-12,2019-09-17,97,MF100,Roscoff.MBloR2.2019.MF100
+British channel (France),France,Roscoff,MarBloR2,48.71751,-3.96649,1,Marina,2019-06-12,2019-09-17,97,MF500,Roscoff.MBloR2.2019.MF500
+British channel (France),France,Roscoff,MarBloR2,48.71751,-3.96649,1,Marina,2019-06-12,2019-09-17,97,SF40,Roscoff.MBloR2.2019.SF40
+British channel (France),France,Roscoff,MarBloR3,48.71751,-3.96649,1,Marina,2019-06-12,2019-09-18,98,MF100,Roscoff.MBloR3.2019.MF100
+British channel (France),France,Roscoff,MarBloR3,48.71751,-3.96649,1,Marina,2019-06-12,2019-09-18,98,MF500,Roscoff.MBloR3.2019.MF500
+British channel (France),France,Roscoff,MarBloR3,48.71751,-3.96649,1,Marina,2019-06-12,2019-09-18,98,SF40,Roscoff.MBloR3.2019.SF40
+British channel (France),France,Roscoff,BasBloS1 ,48.72872,-3.95894,12,MPA,2018-07-11,2018-10-25,106,MF100,Roscoff.BasBloS1.180711.181025.MF100.DMSO
+British channel (France),France,Roscoff,BasBloS1 ,48.72872,-3.95894,12,MPA,2018-07-11,2018-10-25,106,MF500,Roscoff.BasBloS1.180711.181025.MF500.DMSO
+British channel (France),France,Roscoff,BasBloS1 ,48.72872,-3.95894,12,MPA,2018-07-11,2018-10-25,106,SF40,Roscoff.BasBloS1.180711.181025.SF40.DMSO
+British channel (France),France,Roscoff,BasBloS1 ,48.72872,-3.95894,12,MPA,2019-06-12,2020-05-27,350,MF100,Roscoff.BasBloS1.190612.200527.MF100
+British channel (France),France,Roscoff,BasBloS1 ,48.72872,-3.95894,12,MPA,2019-06-12,2020-05-27,350,MF500,Roscoff.BasBloS1.190612.200527.MF500
+British channel (France),France,Roscoff,BasBloS1 ,48.72872,-3.95894,12,MPA,2018-07-11,2018-10-25,106,SF40,Roscoff.BasBloS1.180711.181025.SF40.EtOH
+British channel (France),France,Roscoff,BasBloS2 ,48.72872,-3.95894,12,MPA,2019-06-12,2020-05-28,351,SF40,Roscoff.BasBloS2.190612.200528.SF40
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Preemraff1,58.3533,11.43486,3,Industrial port,2020-04-01,2020-06-10,70,MF100,Preemraff.1.MF100.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Preemraff1,58.3533,11.43486,3,Industrial port,2020-04-01,2020-06-10,70,MF500,Preemraff.1.MF500.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Preemraff1,58.3533,11.43486,3,Industrial port,2020-04-01,2020-06-10,70,SF40,Preemraff.1.SF40.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Preemraff2,58.35405,11.43394,3,Industrial port,2020-04-01,2020-06-10,70,MF100,Preemraff.2.MF100.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Preemraff2,58.35405,11.43394,3,Industrial port,2020-04-01,2020-06-10,70,MF500,Preemraff.2.MF500.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Preemraff2,58.35405,11.43394,3,Industrial port,2020-04-01,2020-06-10,70,SF40,Preemraff.2.SF40.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Marstrand1,57.914434,11.594154,5,Marina,2020-02-28,2020-05-27,89,MF100,Marstrand.1.MF100.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Marstrand1,57.914434,11.594154,5,Marina,2020-02-28,2020-05-27,89,MF500,Marstrand.1.MF500.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Marstrand1,57.914434,11.594154,5,Marina,2020-02-28,2020-05-27,89,SF40,Marstrand.1.SF40.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Marstrand2,57.903512,11.581548,5,Marina,2020-02-28,2020-05-27,89,MF100,Marstrand.2.MF100.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Marstrand2,57.903512,11.581548,5,Marina,2020-02-28,2020-05-27,89,MF500,Marstrand.2.MF500.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Marstrand2,57.903512,11.581548,5,Marina,2020-02-28,2020-05-27,89,SF40,Marstrand.2.SF40.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Marstrand3,57.889278,11.585722,5,Marina,2020-02-28,2020-05-27,89,MF100,Marstrand.3.MF100.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Marstrand3,57.889278,11.585722,5,Marina,2020-02-28,2020-05-27,89,MF500,Marstrand.3.MF500.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Marstrand3,57.889278,11.585722,5,Marina,2020-02-28,2020-05-27,89,Sf40,Marstrand.3.SF40.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Helsingborg1,56.026272,12.695728,2,Industrial port,2020-03-05,2020-06-04,91,MF100,Helsingborg.1.MF100.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Helsingborg1,56.026272,12.695728,2,Industrial port,2020-03-05,2020-06-04,91,MF500,Helsingborg.1.MF500.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Helsingborg1,56.026272,12.695728,2,Industrial port,2020-03-05,2020-06-04,91,SF40,Helsingborg.1.SF40.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Helsingborg2,56.018061,12.700541,2,Industrial port,2020-03-05,2020-06-04,91,MF100,Helsingborg.2.MF100.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Helsingborg2,56.018061,12.700541,2,Industrial port,2020-03-05,2020-06-04,91,MF500,Helsingborg.2.MF500.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Helsingborg2,56.018061,12.700541,2,Industrial port,2020-03-05,2020-06-04,91,SF40,Helsingborg.2.SF40.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Varberg1,57.1133741,12.2299832,2,Industrial port,2020-02-13,2020-06-03,111,MF100,Varberg.1.MF100.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Varberg1,57.1133741,12.2299832,2,Industrial port,2020-02-13,2020-06-03,111,MF500,Varberg.1.MF500.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Varberg1,57.1133741,12.2299832,2,Industrial port,2020-02-13,2020-06-03,111,SF40,Varberg.1.SF40.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Varberg2,57.1126278,12.2302732,2,Industrial port,2020-02-13,2020-06-03,111,MF100,Varberg.2.MF100.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Varberg2,57.1126278,12.2302732,2,Industrial port,2020-02-13,2020-06-03,111,SF40,Varberg.2.SF40.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Varberg3,57.1107004,12.2439775,2,Industrial port,2020-02-13,2020-06-03,111,MF100,Varberg.3.MF100.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Varberg3,57.1107004,12.2439775,2,Industrial port,2020-02-13,2020-06-03,111,MF500,Varberg.3.MF500.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Varberg3,57.1107004,12.2439775,2,Industrial port,2020-02-13,2020-06-03,111,SF40,Varberg.3.SF40.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Gbg1,57.664805,11.714735,6,Industrial port,2020-02-06,2020-05-20,104,MF100,Gbg.1.MF100.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Gbg1,57.664805,11.714735,6,Industrial port,2020-02-06,2020-05-20,104,MF500,Gbg.1.MF500.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Gbg1,57.664805,11.714735,6,Industrial port,2020-02-06,2020-05-20,104,SF40,Gbg.1.SF40.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Gbg2,57.664608,11.732876,24,Industrial port,2020-02-06,2020-05-20,104,MF100,Gbg.2.MF100.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Gbg2,57.664608,11.732876,24,Industrial port,2020-02-06,2020-05-20,104,MF500,Gbg.2.MF500.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Gbg2,57.664608,11.732876,24,Industrial port,2020-02-06,2020-05-20,104,SF40,Gbg.2.SF40.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Gbg3,57.680533,11.740578,8,Industrial port,2020-02-06,2020-05-29,113,MF100,Gbg.3.MF100.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Gbg3,57.680533,11.740578,8,Industrial port,2020-02-06,2020-05-29,113,MF500,Gbg.3.MF500.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Gbg3,57.680533,11.740578,8,Industrial port,2020-02-06,2020-05-29,113,SF40,Gbg.3.SF40.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Gbg4,57.680805,11.728331,6,Industrial port,2020-02-06,2020-05-29,113,MF100,Gbg.4.MF100.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Gbg4,57.680805,11.728331,6,Industrial port,2020-02-06,2020-05-29,113,MF500,Gbg.4.MF500.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Gbg4,57.680805,11.728331,6,Industrial port,2020-02-06,2020-05-29,113,Sf40,Gbg.4.SF40.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Bjorko1,57.717984,11.679989,2,Marina,2020-01-31,2020-05-18,108,MF100,Bjorko.MF100.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Bjorko1,57.717984,11.679989,2,Marina,2020-01-31,2020-05-18,108,MF500,Bjorko.MF500.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Bjorko1,57.717984,11.679989,2,Marina,2020-01-31,2020-05-18,108,SF40,Bjorko.SF40.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Hjuvik1,57.703221,11.711363,2,Marina,2020-01-31,2020-05-18,108,MF100,Hjuvik.1.MF100.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Hjuvik1,57.703221,11.711363,2,Marina,2020-01-31,2020-05-18,108,MF500,Hjuvik.1.MF500.2020
+North Sea Kattegat (Sweden),Sweden,SwedishWestCoast,Hjuvik1,57.703221,11.711363,2,Marina,2020-01-31,2020-05-18,108,SF40,Hjuvik.1.SF40.2020
+Baltic Sea (Finland),Finland,TZS,Angbat ,59.841505,23.248879,4,LHI,2018-07-11,2018-11-06,118,MF100,TZS.Angbat.180711.181106.MF100.EtOH
+Baltic Sea (Finland),Finland,TZS,Angbat ,59.841505,23.248879,4,LHI,2018-07-11,2018-11-06,118,MF500,TZS.Angbat.2018.MF500
+Baltic Sea (Finland),Finland,TZS,Angbat ,59.841505,23.248879,4,LHI,2018-07-11,2018-11-06,118,SF48,TZS.Angbat.180711.181106.SF48.EtOH
+Baltic Sea (Finland),Finland,TZS,Angbat ,59.841505,23.248879,4,LHI,2020-06-08,2020-11-17,162,MF100,TZS.Angbat.200608.201117.MF100
+Baltic Sea (Finland),Finland,TZS,Angbat ,59.841505,23.248879,4,LHI,2020-06-08,2020-11-17,162,MF500,TZS.Angbat.200608.201117.MF500
+Baltic Sea (Finland),Finland,TZS,Angbat ,59.841505,23.248879,4,LHI,2020-06-08,2020-11-17,162,SF40,TZS.Angbat.200608.201117.SF40
+Baltic Sea (Finland),Finland,TZS,Spikarna,59.81094,23.206216,3,LHI,2018-07-11,2018-11-07,119,MF100,TZS.Spikarna.180711.181107.MF100.EtOH
+Baltic Sea (Finland),Finland,TZS,Spikarna,59.81094,23.206216,3,LHI,2018-07-11,2018-11-07,119,MF500,TZS.Spikarna.2018.MF500
+Baltic Sea (Finland),Finland,TZS,Spikarna,59.81094,23.206216,3,LHI,2018-07-11,2018-11-07,119,SF48,TZS.Spikarna.180711.181107.SF48.EtOH
+Baltic Sea (Finland),Finland,TZS,Kummelkobben,59.8645,23.26515,3,LHI,2020-06-08,2020-11-20,165,MF100,TZS.Kummelkobben.200608.201120.MF100
+Baltic Sea (Finland),Finland,TZS,Kummelkobben,59.8645,23.26515,3,LHI,2020-06-08,2020-11-20,165,MF500,TZS.Kummelkobben.200608.201120.MF500
+Baltic Sea (Finland),Finland,TZS,Kummelkobben,59.8645,23.26515,3,LHI,2020-06-08,2020-11-20,165,SF40,TZS.Kummelkobben.200608.201120.SF40
+Atlantic coast (Spain),Spain,Vigo,TorallaA,42.23611111,-8.78611111,12,Industrial port,2019-06-25,2019-10-14,111,MF100,Toralla.A.2019.MF100
+Atlantic coast (Spain),Spain,Vigo,TorallaA,42.23611111,-8.78611111,12,Industrial port,2019-06-25,2019-10-14,111,MF500,Toralla.A.2019.MF500
+Atlantic coast (Spain),Spain,Vigo,TorallaA,42.23611111,-8.78611111,12,Industrial port,2019-06-25,2019-10-14,111,SF40,Toralla.AA.2019.SF40
+Atlantic coast (Spain),Spain,Vigo,TorallaA,42.23611111,-8.78611111,12,Industrial port,2019-06-25,2019-10-14,111,SF40,Toralla.AB.2019.SF40
+Atlantic coast (Spain),Spain,Vigo,TorallaA,42.23611111,-8.78611111,12,Industrial port,2019-06-25,2019-10-14,111,SF40,Toralla.AC.2019.SF40
+Atlantic coast (Spain),Spain,Vigo,TorallaB,42.233333,-8.783333,12,Industrial port,2019-06-25,2019-10-14,111,MF100,Toralla.B.2019.MF100
+Atlantic coast (Spain),Spain,Vigo,TorallaB,42.233333,-8.783333,12,Industrial port,2019-06-25,2019-10-14,111,MF500,Toralla.B.2019.MF500
+Atlantic coast (Spain),Spain,Vigo,TorallaC ,42.233333,-8.783333,12,Industrial port,2019-06-25,2019-10-14,111,MF100,Toralla.C.2019.MF100
+Atlantic coast (Spain),Spain,Vigo,TorallaC ,42.233333,-8.783333,12,Industrial port,2019-06-25,2019-10-14,111,MF500,Toralla.C.2019.MF500
