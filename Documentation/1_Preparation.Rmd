@@ -9,16 +9,6 @@ output: pdf_document
 knitr::opts_chunk$set(eval = FALSE)
 ```
 
-# Workflow introduction
-
-This workflow (RGBIFanimals_IVP) is a revision of the original workflow rgbifanimals. (link to original workflow: https://github.com/DvBMolEc/rgbifanimals)
-
-The goal of the RGBIFanimals_IVP workflow is to analyse data obtained from the Autonomous Reef Monitoring Structures - Marine Biodiversity Observation Network (ARMS-MBON) project. However, the aim is to make this workflow interoperable and shareable to marine biologists or anyone working in marine biology => in need of a method for detecting alien species.
-
-The focus of this workflow is the detection of marine alien species or Non-Indigenous Species (NIS). These are species that travel great distances to a point that they are no longer in their natural habitat. These species are being detected with the ARMS project. There are three types of potential alien species: cryptogenic, hitchhiking and rande expanding species.
-
-The most important step in this pipeline is fetching occurrence data from the Global Biodiversity Information Facility (GBIF) website/database and calculating distances with samplelocations from ARMS. This step is performed in the [new main script] and this is computationally very expensive, this step takes hours relative to the amount of data being analysed.
-
 ## 1_Preparation.R script
 
 WARNING: This script focuses on outputfiles from the BOLDigger pipeline. Make sure to check this script before running. Some ARMS locations and taxonomy are hardcoded. The headers in the BOLDigger file consist of sample names that are not consistent and sometimes have year only or full dates. Some of them have ARMS fraction names (MF100, MF500, SF40).

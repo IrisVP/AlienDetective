@@ -35,7 +35,7 @@ library(rnaturalearthhires)
 # Set working directory to directory where the R-script is saved
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 # Read a species list
-df <- read.csv("Output/Species_Location.csv")
+df <- read.csv("Output/Species_Location_defence.csv")
 # Read coordinates file
 Coordinates <- read.csv("Inputs/Coordinates.csv")
 
