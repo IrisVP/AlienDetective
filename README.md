@@ -31,3 +31,11 @@ Histograms are created showing the frequencies of species occurrences per sample
 4. The fourth graph is also similar to the first graph but colored by year category.
 
 Patterns can be observed in these histograms. The x-axis represents distances in km, and the y-axis represents frequency. An alien species can be detected when there is a spike in frequency at a large distance. Using the country plot, the origin region of the species can be identified. Using the year plot, the year in which the species migrated to that location can be determined.
+
+#### 1_Preparation.R
+
+This script is located in the directory called 'Preparation_BOLDigger'. This script can be used when files from the BOLDigger workflow are used. Be sure to check if the headers of your files are the same as the example BOLDigger file in 'Input'. 
+
+### /!\ Warnings /!\
+
+The distance to a location inside a bay or canal next to the coast line will most likely not be calculated. The world map used in the calculation does not have a good enough resolution to differentiate bays or canals from land areas. If you want calculation to these locations, place the coordinates outwards in the sea or ocean. Fresh water sources are also not included in these calculations.
