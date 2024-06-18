@@ -1,4 +1,8 @@
 
+##################################################################################
+# This script is an alternative script for calculating sea distances and fly distances
+##################################################################################
+
 ############################################################################################
 # LOAD PACKAGES
 ############################################################################################
@@ -35,7 +39,7 @@ library(rnaturalearthhires)
 # Set working directory to directory where the R-script is saved
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 # Read a species list
-df <- read.csv("Output/Species_Location_defence.csv")
+df <- read.csv("Output_preparation/Species_Location_defence.csv")
 # Read coordinates file
 Coordinates <- read.csv("Inputs/Coordinates.csv")
 
@@ -47,8 +51,6 @@ Coordinates <- read.csv("Inputs/Coordinates.csv")
 long <- pivot_longer(df, !Specieslist)
 # from tidyr package, reshape df from wide to long format
 long <- long[long$value > 0, ]
-
-long <- subset(long, Specieslist == "Acartia bifilosa" & name == "Koster")
 
 #####################################################################################
 # FIRST CHECK IF FILE WITH OCCURRENCE DATA IN OCCURRENCEDATA DIRECTORY EXISTS
@@ -67,7 +69,7 @@ ensure_columns <- function(df, required_columns) {
   return(df)
 }
 fetch_data_in_batches <- function(species_name, basisOfRecord, batch_size = 10000) {
-  start <- 0
+  #start <- 0
   combined_data <- data.frame()
     res <- occ_data(scientificName = species_name, 
                     hasCoordinate = TRUE, 
@@ -75,7 +77,7 @@ fetch_data_in_batches <- function(species_name, basisOfRecord, batch_size = 1000
                     basisOfRecord = basisOfRecord,
                     continent = "europe")
   combined_data <- rbind(combined_data, res$data)
-  Sys.sleep(1)  # Adding a small delay to be polite to the server
+  Sys.sleep(2)  # Adding a small delay to be polite to the server
   
   return(combined_data)
 }
@@ -86,17 +88,17 @@ for (species_name in unique(long$Specieslist)){
   print(paste0("species_name: ", species_name))
   # if file exists:        put content into variable res
   # if file doesn't exist: make one, get data, and put into variable res
-  occurrence_coord <- paste0("OccurrenceData_test/", species_name, ".csv")
+  occurrence_coord <- paste0("OccurrenceData/", species_name, ".csv")
   if (file.exists(occurrence_coord) == TRUE) {
     res <- read.csv(occurrence_coord, header = TRUE)
   } else {
     data_list <- list(
-      fetch_data_in_batches(species_name, "Observation"),
-      fetch_data_in_batches(species_name, "Machine observation"),
-      fetch_data_in_batches(species_name, "Human observation"),
-      fetch_data_in_batches(species_name, "Material sample"),
-      fetch_data_in_batches(species_name, "Living specimen"),
-      fetch_data_in_batches(species_name, "Occurrence"))
+      fetch_data_in_batches(species_name, "OBSERVATION"),
+      fetch_data_in_batches(species_name, "MACHINE_OBSERVATION"),
+      fetch_data_in_batches(species_name, "HUMAN_OBSERVATION"),
+      fetch_data_in_batches(species_name, "MATERIAL_SAMPLE"),
+      fetch_data_in_batches(species_name, "LIVING_SPECIMEN"),
+      fetch_data_in_batches(species_name, "OCCURRENCE"))
 
     # Initialize an empty list to store processed data frames
     processed_data <- list()
@@ -132,22 +134,21 @@ for (species_name in unique(long$Specieslist)){
     error_message <- paste0("No information found on GBIF for ", species_name)
     
     # check if directory with error messages exists, if it doesn't: make one
-    if (!dir.exists("test_outputs/errors")){
-      dir.create("test_outputs/errors", recursive = TRUE)
-      error_file_name <- paste0("test_outputs/errors/error_", species_name, ".csv")
-      # error files written to test_outputs/errors/
+    if (!dir.exists("Output_calculations/errors")){
+      dir.create("Output_calculations/errors", recursive = TRUE)
+      error_file_name <- paste0("Output_calculations/errors/error_", species_name, ".csv")
+      # error files written to Output_calculations/errors/
       write.csv(error_message, file = error_file_name)
       return(FALSE)
     
       # write error file to the directory
     } else {
-      error_file_name <- paste0("test_outputs/errors/error_", species_name, ".csv")
-      # error files written to test_outputs/errors/
+      error_file_name <- paste0("Output_calculations/errors/error_", species_name, ".csv")
+      # error files written to Output_calculations/errors/
       write.csv(error_message, file = error_file_name)
       return(FALSE)
     }
   }
-  print("file has successfully been written")
   write.csv(res_total, file = occurrence_coord)
 }
 
@@ -171,7 +172,7 @@ Calculation_seadistance <- function(species_name, species_location){
   
   # Try to read occurrence data
   OccurrenceData <- tryCatch({
-    occurrence_coord <- paste0("theoretical_data/OccurrenceData_toKoster/", species_name, ".csv")
+    occurrence_coord <- paste0("OccurrenceData/", species_name, ".csv")
     read.csv(occurrence_coord, header = TRUE)
   }, error = function(e) {
     add_error_message(paste("Error reading occurrence data for", species_name, ":", e$message))
@@ -210,6 +211,7 @@ Calculation_seadistance <- function(species_name, species_location){
   costs <- reclassify(r, cbind(1, Inf))                        # Reclassify the raster: convert all values of 1 to Inf (infinity)
   costs[is.na(costs)] <- 1    # Replace NA values in the 'costs' raster with 1
   
+  
   # Initialize lists to store distances
   sea_distances <- c()
   flying_distances <- c()
@@ -217,37 +219,39 @@ Calculation_seadistance <- function(species_name, species_location){
   # for loop to iterate over OccurrenceData
   for (row in 1:nrow(OccurrenceData)) {
     print(paste0("Calculating latitude: ", OccurrenceData[row, 3], " and longitude: ", OccurrenceData[row, 2]))
-    print(paste0("for samplelocation latitude, longitude: ", samplelocation[,1], " ", samplelocation[,2]))
+    print(paste0("for ", species_location, " latitude, longitude: ", samplelocation[,1], " ", samplelocation[,2]))
     
     #################
     ## SEA DISTANCE##
     #################
     
+    transition_matrix <- "transitMatrix.rds"
+    if (!file.exists(transition_matrix)) {
+      # Create a transition object for adjacent cells
+      transitMatrix <- transition(costs, transitionFunction = function(x) 1/mean(x), directions = 16)
+      # Set infinite costs to NA to prevent travel through these cells
+      transitMatrix <- geoCorrection(transitMatrix, scl = TRUE)
+      # Save/Load transition matrix
+      saveRDS(transitMatrix, file = "transitMatrix.rds")
+      
+    } else {
+      transitMatrix <- readRDS(file = "transitMatrix.rds")
+    }
+    
+    
+    # Define points using correct projection
+    point1 <- SpatialPoints(cbind(samplelocation$Longitude, samplelocation$Latitude), proj4string = CRS(proj4string(r)))
+    point2 <- SpatialPoints(cbind(OccurrenceData[row, 2], OccurrenceData[row, 3]), proj4string = CRS(proj4string(r)))
+    
+    # Check if the OccurrenceData point is on land, if so, skip this iteration
+    if (!is.na(raster::extract(r, point2))) {
+      add_error_message(paste("Point on land detected for ", species_name, " at ", OccurrenceData[row, 2], "", OccurrenceData[row, 3]))
+      cat("Point on land detected for species at ", OccurrenceData[row, 2], OccurrenceData[row, 3], "\n")
+      sea_distances <- append(sea_distances, Inf)
+      next
+    }
+
     sea_distance <- tryCatch({
-      
-      transition_matrix <- "transitMatrix.rds"
-      if (!file.exists(transition_matrix)) {
-        # Create a transition object for adjacent cells
-        transitMatrix <- transition(costs, transitionFunction = function(x) 1/mean(x), directions = 16)
-        # Set infinite costs to NA to prevent travel through these cells
-        transitMatrix <- geoCorrection(transitMatrix, scl = TRUE)
-        # Save/Load transition matrix
-        saveRDS(transitMatrix, file = "transitMatrix.rds")
-      
-      } else {
-        transitMatrix <- readRDS(file = "transitMatrix.rds")
-      }
-      
-      # Define points using correct projection
-      point1 <- SpatialPoints(cbind(samplelocation$Longitude, samplelocation$Latitude), proj4string = CRS(proj4string(r)))
-      point2 <- SpatialPoints(cbind(OccurrenceData[row, 2], OccurrenceData[row, 3]), proj4string = CRS(proj4string(r)))
-      # Check if the OccurrenceData point is on land, if so, skip this and put inf as a result
-      if (!is.na(raster::extract(r, point2))) {
-        add_error_message(paste("Point on land detected for", species_name, "at", OccurrenceData[row, 2], "", OccurrenceData[row, 3]))
-        sea_distances <- append(sea_distances, Inf)
-        next
-      }
-      
       # Coerce points to SpatialPointsDataFrame for compatibility with gdistance
       point1_df <- SpatialPointsDataFrame(coords = point1, data = data.frame(id = 1), proj4string = CRS(proj4string(r)))
       point2_df <- SpatialPointsDataFrame(coords = point2, data = data.frame(id = 2), proj4string = CRS(proj4string(r)))
@@ -274,6 +278,7 @@ Calculation_seadistance <- function(species_name, species_location){
   
       # Convert SpatialLines to sf object
       shortest_path_sf <- st_as_sf(shortest_path)
+      
       # Confirm CRS is set for sf object, if not, set it:
       if (is.na(st_crs(shortest_path_sf))) {
         st_crs(shortest_path_sf) <- 4326  # EPSG code for WGS 84
@@ -281,10 +286,11 @@ Calculation_seadistance <- function(species_name, species_location){
   
       # Transform to a suitable projected CRS for distance calculation (e.g., UTM zone 33N)
       shortest_path_utm <- st_transform(shortest_path_sf, 32633)  # UTM zone 33N
-  
+
       # Calculate the length in meters
       path_length <- st_length(shortest_path_utm)
-    
+      path_length <- as.numeric(path_length)
+      
       # Print the length
       print(paste0("distance through sea in m: ", path_length))
       sea_distances <- append(sea_distances, path_length)
@@ -306,7 +312,7 @@ Calculation_seadistance <- function(species_name, species_location){
     
     # Check if the OccurrenceData point is on land
     if (!is.na(raster::extract(r, point2))) {
-      add_error_message(paste("Point on land detected for", species_name, "at", OccurrenceData[row, 2], "", OccurrenceData[row, 3]))
+      add_error_message(paste("Point on land detected for ", species_name, " at ", OccurrenceData[row, 2], "", OccurrenceData[row, 3]))
       flying_distances <- append(flying_distances, Inf)
       next
     }
@@ -337,7 +343,9 @@ Calculation_seadistance <- function(species_name, species_location){
   }
   ### CHECKS IF NECESSARY ###
   #cat("Length of flying_distances: ", length(flying_distances), "\n")
+  #cat("content of flying_distances: ", flying_distances, "\n")
   #cat("Length of sea_distances: ", length(sea_distances), "\n")
+  #cat("content of sea_distances: ", sea_distances, "\n")
   #cat("Length of OccurrenceData$year: ", length(OccurrenceData$year), "\n")
   #cat("Length of OccurrenceData$month: ", length(OccurrenceData$month), "\n")
   #cat("Length of OccurrenceData$country: ", length(OccurrenceData$country), "\n")
@@ -349,16 +357,16 @@ Calculation_seadistance <- function(species_name, species_location){
   fly_data <- create_data_frame(flying_distances, OccurrenceData$year, OccurrenceData$month, OccurrenceData$country)
   
   # Define file paths
-  sea_distance_file <- paste0("test_outputs/sea_distances/", species_name, "_distancesTo_", species_location, ".csv")
-  fly_distance_file <- paste0("test_outputs/fly_distances/", species_name, "_distancesTo_", species_location, ".csv")
+  sea_distance_file <- paste0("Output_calculations/sea_distances/", species_name, "_distancesTo_", species_location, ".csv")
+  fly_distance_file <- paste0("Output_calculations/fly_distances/", species_name, "_distancesTo_", species_location, ".csv")
   
   # Create directories if they do not exist
-  if (!dir.exists("test_outputs/sea_distances")) {
-    dir.create("test_outputs/sea_distances", recursive = TRUE)
+  if (!dir.exists("Output_calculations/sea_distances")) {
+    dir.create("Output_calculations/sea_distances", recursive = TRUE)
   }
   
-  if (!dir.exists("test_outputs/fly_distances")) {
-    dir.create("test_outputs/fly_distances", recursive = TRUE)
+  if (!dir.exists("Output_calculations/fly_distances")) {
+    dir.create("Output_calculations/fly_distances", recursive = TRUE)
   }
   
   # Write data frames to CSV files

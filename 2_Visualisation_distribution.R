@@ -12,7 +12,7 @@ library("poliscidata")
 # Set working directory to directory where the R-script is saved
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 # first load in species_location file
-species_location <- read.csv("Output/1_Species_Location.csv")
+species_location <- read.csv("Output_Preparation/Species_Location.csv")
 # Reshape data from wide to long format
 long <- pivot_longer(species_location, !Specieslist)
 # Filter rows where 'value' is greater than 0
@@ -27,9 +27,9 @@ Distribution_seadistance <- function(species_name, species_location){
   # read csv file per species
   print(paste0("species_name: ", species_name))
   print(paste0("species_location: ", species_location))
-  distance_file <- paste0("theoretical_data/sea_distances/", species_name, "_distancesTo_", species_location, "_realData.csv")
+  distance_file <- paste0("Output_calculations/sea_distances/", species_name, "_distancesTo_", species_location, ".csv")
   
-  distances <- read.table(distance_file, header = TRUE)
+  distances <- read.csv(distance_file, header = TRUE)
   # clean dataframe from rows with Inf in them
   distances <- distances[is.finite(distances$x), ]
   distances$x <- distances$x/1000
@@ -38,7 +38,6 @@ Distribution_seadistance <- function(species_name, species_location){
   ###############################################################################
   # make histograms of distances per species, with filtering on distance limit 40000
   ###############################################################################
-  
   dist_plot <- ggplot(distances, aes(x = x)) +
     geom_histogram(binwidth = 50, fill = "blue", color = "black", boundary = 0) +
     labs(title = "Histogram of Distances", x = "Distance in km", y = "Frequency of species") +
@@ -56,12 +55,12 @@ Distribution_seadistance <- function(species_name, species_location){
   #print(dist_plot)
   # create a directory to save the plots in
   
-  if(!dir.exists("test_outputs/sea_distribution_plots")) {
-    dir.create("test_outputs/sea_distribution_plots")
-    ggsave(filename = paste0("test_outputs/sea_distribution_plots/plot_", species_name, "_from_", species_location, ".png"), 
+  if(!dir.exists("Output_calculations/sea_distribution_plots")) {
+    dir.create("Output_calculations/sea_distribution_plots")
+    ggsave(filename = paste0("Output_calculations/sea_distribution_plots/plot_", species_name, "_from_", species_location, ".png"), 
            plot = dist_plot, width = 50, height = 30, units = "cm", dpi = 900)
   } else {
-    ggsave(filename = paste0("test_outputs/sea_distribution_plots/plot_", species_name, "_from_", species_location, ".png"), 
+    ggsave(filename = paste0("Output_calculations/sea_distribution_plots/plot_", species_name, "_from_", species_location, ".png"), 
            plot = dist_plot, width = 50, height = 30, units = "cm", dpi = 900)
   }
 }
@@ -76,7 +75,7 @@ plot <- Map(Distribution_seadistance, long$Specieslist, long$name)
 # write error files
 print(error)
 
-file_error <- paste0("test_outputs/errors_graph_sea_distances.csv",)
+file_error <- paste0("Output_calculations/errors_graph_sea_distances.csv",)
 write.table(error, file = file_error, append = TRUE, quote = FALSE, 
             col.names = FALSE, row.names = FALSE)
 
@@ -137,12 +136,12 @@ Distribution_combDistance <- function(species_name, species_location){
   #print(p)
   
   # check if directory exists, save the plot
-  if(!dir.exists(paste0("test_outputs/combined_distribution_plots"))) {
-    dir.create(paste0("test_outputs/combined_distribution_plots"))
-    ggsave(filename = paste0("test_outputs/combined_distribution_plots/plotcomb_", species_name, "_from_", species_location,".png"), 
+  if(!dir.exists(paste0("Output_calculations/combined_distribution_plots"))) {
+    dir.create(paste0("Output_calculations/combined_distribution_plots"))
+    ggsave(filename = paste0("Output_calculations/combined_distribution_plots/plotcomb_", species_name, "_from_", species_location,".png"), 
            plot = p, width = 60, height = 30, units = "cm", dpi = 900)
   } else {
-    ggsave(filename = paste0("test_outputs/combined_distribution_plots/plotcomb_", species_name, "_from_", species_location,".png"), 
+    ggsave(filename = paste0("Output_calculations/combined_distribution_plots/plotcomb_", species_name, "_from_", species_location,".png"), 
            plot = p, width = 60, height = 30, units = "cm", dpi = 900)
   }
 }
@@ -159,9 +158,9 @@ Location_histograms <- function(species_name, species_location){
   print(paste0("species_name: ", species_name))
   print(paste0("species_location: ", species_location))
   # make variable with filename
-  distance_file <- paste0("test_outputs/sea_distances/", species_name, "_distancesTo_", species_location, "_realData.csv")
+  distance_file <- paste0("Output_calculations/sea_distances/", species_name, "_distancesTo_", species_location, ".csv")
   # read csv file per species
-  distance_file <- read.table(distance_file, header = TRUE, sep = ",")
+  distance_file <- read.csv(distance_file, header = TRUE)
   # convert to meters
   distance_file$x <- distance_file$x/1000
   # select only distances below 40000km
@@ -188,12 +187,12 @@ Location_histograms <- function(species_name, species_location){
   
   #print(country_plot)
   # create a directory to save the plots in
-  if(!dir.exists("test_outputs/sea_distribution_country_plots")) {
-    dir.create("test_outputs/sea_distribution_country_plots")
+  if(!dir.exists("Output_calculations/sea_distribution_country_plots")) {
+    dir.create("Output_calculations/sea_distribution_country_plots")
     ggsave(filename = paste0("theoretical_data/plot_", species_name, "_from_", species_location, ".png"), 
            plot = country_plot, width = 60, height = 30, units = "cm", dpi = 900)
   } else {
-    ggsave(filename = paste0("test_outputs/sea_distribution_country_plots/plot_", species_name, "_from_", species_location, ".png"), 
+    ggsave(filename = paste0("Output_calculations/sea_distribution_country_plots/plot_", species_name, "_from_", species_location, ".png"), 
            plot = country_plot, width = 60, height = 30, units = "cm", dpi = 900)
   }
 }
@@ -264,12 +263,12 @@ Year_histograms <- function(species_name, species_location){
   
   #print(year_plot)
   # create a directory to save the plots in
-  if(!dir.exists("test_outputs/sea_distribution_year_plots")) {
-    dir.create("test_outputs/sea_distribution_year_plots")
-    ggsave(filename = paste0("test_outputs/sea_distribution_year_plots/plot_", species_name, "_from_", species_location, ".png"), 
+  if(!dir.exists("Output_calculations/sea_distribution_year_plots")) {
+    dir.create("Output_calculations/sea_distribution_year_plots")
+    ggsave(filename = paste0("Output_calculations/sea_distribution_year_plots/plot_", species_name, "_from_", species_location, ".png"), 
            plot = year_plot, width = 60, height = 30, units = "cm", dpi = 900)
   } else {
-    ggsave(filename = paste0("test_outputs/sea_distribution_year_plots/plot_", species_name, "_from_", species_location, ".png"), 
+    ggsave(filename = paste0("Output_calculations/sea_distribution_year_plots/plot_", species_name, "_from_", species_location, ".png"), 
            plot = year_plot, width = 60, height = 30, units = "cm", dpi = 900)
   }
 }
