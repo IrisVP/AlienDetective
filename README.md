@@ -16,10 +16,14 @@ Note: The Coordinates.csv and Species_Location.csv files should be prepared exac
 For detailed documentation: see the 'Documentation' directory for .Rmd files
 
 #### 1_Calculation_sea_distances.R
+/!\ Run this on a server. This is computationally expensive. <br />
 
 1. Download and install libraries, then load data.
 2. Retrieve occurrence data from GBIF, focusing on Europe. The settings for fetching data can be personalized here.
 3. Calculate distances: both flying and sea distances are calculated and saved in files inside the 'Output_calculations' directory.
+
+##### Output
+The output are two directories in the 'Output_calculations' directory named 'sea_distances' and 'fly_distances'. Separate csv files are made for each organism and their corresponding samplelocation name.
 
 #### 2_Visualisation_distribution.R
 
