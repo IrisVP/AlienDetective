@@ -32,7 +32,9 @@ Distribution_seadistance <- function(species_name, species_location){
   distances <- read.csv(distance_file, header = TRUE)
   # clean dataframe from rows with Inf in them
   distances <- distances[is.finite(distances$x), ]
+  # calculates km
   distances$x <- distances$x/1000
+  # select distances
   distances <- subset(distances, x < 40000)
   
   ###############################################################################
@@ -87,15 +89,15 @@ write.table(error, file = file_error, append = TRUE, quote = FALSE,
 
 Distribution_combDistance <- function(species_name, species_location){
   # make variables with filenames in which distances are saved
-  sea_distance_file <- paste0("theoretical_data/sea_distances/", species_name, "_distancesTo_", species_location, "_realData.csv")
-  fly_distance_file <- paste0("theoretical_data/fly_distances/", species_name, "_distancesTo_", species_location, "_realData.csv")
+  sea_distance_file <- paste0("Output_calculations/sea_distances/", species_name, "_distancesTo_", species_location, ".csv")
+  fly_distance_file <- paste0("Output_calculations/fly_distances/", species_name, "_distancesTo_", species_location, ".csv")
   
   # read the files
-  sea_distances <- read.table(sea_distance_file)
-  fly_distances <- read.table(fly_distance_file)
+  sea_distances <- read.csv(sea_distance_file, header = TRUE)
+  fly_distances <- read.csv(fly_distance_file, header = TRUE)
   # transform Inf to NA
-  sea_distances$x[is.infinite(sea_distances$x)] <- NA
-  fly_distances$x[is.infinite(fly_distances$x)] <- NA
+  sea_distances <- sea_distances[is.finite(sea_distances$x),]
+  fly_distances <- fly_distances[is.finite(fly_distances$x),]
   
   # convert each dataframe from m to km and select the distances smaller than 40000km
   sea_distances$x <- sea_distances$x/1000
@@ -163,6 +165,8 @@ Location_histograms <- function(species_name, species_location){
   distance_file <- read.csv(distance_file, header = TRUE)
   # convert to meters
   distance_file$x <- distance_file$x/1000
+  # clean dataframe from rows with Inf in them
+  distance_file <- distance_file[is.finite(distance_file$x), ]
   # select only distances below 40000km
   distances <- subset(distance_file, x < 40000)
   
@@ -211,16 +215,16 @@ Year_histograms <- function(species_name, species_location){
   print(paste0("species_name: ", species_name))
   print(paste0("species_location: ", species_location))
   # make variable with filename
-  distance_file <- paste0("theoretical_data/sea_distances/", species_name,
+  distance_file <- paste0("Output_calculations/sea_distances/", species_name,
                           "_distancesTo_", species_location, ".csv")
   
   # read the csv files
-  distance_file <- read.table(distance_file, header = TRUE)
+  distance_file <- read.csv(distance_file, header = TRUE)
   # convert to meters
   distance_file$x <- distance_file$x/1000
-  # select only distances below 40000km
+  # clean dataframe from rows with Inf in them
+  distance_file <- distance_file[is.finite(distance_file$x), ]
   distances <- subset(distance_file, x < 40000)
-  
   # make a function which assigns years to specific year categories
   assign_category <- function(year) {
     if (is.na(year)) {
