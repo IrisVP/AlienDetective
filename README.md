@@ -1,4 +1,4 @@
-![logo4](https://github.com/IrisVP/AlienDetective/assets/151626670/342f0dd9-bca4-40a1-a1fe-8fc9469ef376)
+![logo3](https://github.com/IrisVP/AlienDetective/assets/151626670/21dd7508-bd81-448a-a096-db07bace2515)
 
 # AlienDetective
 Species of maritime fauna all over the world are known to travel great distances in the oceans and seas. The goal of this workflow is to be able to detect them by calculating sea distances (going around land) from a sample location to the occurrence data from this species (from GBIF). This workflow focuses on occurrence data in Europe.
